@@ -12,5 +12,18 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+
+    const CamelTitles = [];
+    for (const tutorial of tutorials) {
+      const CamelTitle = tutorial
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      CamelTitles.push(CamelTitle);
+    }
+
+    return CamelTitles;
+
+    }
+
+console.log(titleCased());
